@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
+    <title>Free Page - NatGeo Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         function toggleMenu() {
             const nav = document.getElementById('mobileMenu');
@@ -13,192 +14,86 @@
     </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-black text-white">
 
     <!-- NAVBAR -->
-    <header class="bg-yellow-500 text-black p-4 shadow-lg">
-        <nav class="container mx-auto flex justify-between">
-            <h1 class="font-bold text-xl">National Geographic</h1>
-            <ul class="flex gap-6">
-                <li><a href="index.html" class="hover:underline">Home</a></li>
-                <li><a href="biodata.html" class="hover:underline">Biodata</a></li>
-                <li><a href="posts.html" class="hover:underline">Posts</a></li>
-                <li><a href="freepage.html" class="hover:underline">Free Page</a></li>
-                <li><a href="contact_us.html" class="hover:underline font-semibold underline">Contact</a></li>
+    <header class="bg-black border-b border-yellow-500 sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" class="h-10 w-auto" alt="Logo">
+                <h1 class="text-2xl font-bold text-yellow-400">NatGeo Project</h1>
+            </div>
+
+            <ul class="hidden md:flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="biodata.html" class="hover:text-yellow-400">Biodata</a></li>
+                <li><a href="posts.html" class="hover:text-yellow-400">Posts</a></li>
+                <li><a href="contact_us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                <li><a href="freepage.html" class="hover:text-yellow-400">Free Page</a></li>
             </ul>
+
+            <button class="md:hidden text-yellow-400 text-3xl" onclick="toggleMenu()">☰</button>
         </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-yellow-500 p-4 space-y-3 text-lg">
+            <a href="index.html" class="block hover:text-yellow-400">Home</a>
+            <a href="biodata.html" class="block hover:text-yellow-400">Biodata</a>
+            <a href="posts.html" class="block hover:text-yellow-400">Posts</a>
+            <a href="contact_us.html" class="block hover:text-yellow-400">Contact Us</a>
+            <a href="freepage.html" class="block hover:text-yellow-400">Free Page</a>
+        </div>
     </header>
 
-    <!-- FORM SECTION (ISIAN DARI KAMU) -->
-    <section class="container mx-auto p-4 mt-6">
-        <h2 class="text-3xl font-bold text-center mb-6">Student Registration Form</h2>
-
-        <!-- Success Message -->
-        <div id="successMessage" class="hidden bg-green-600 text-white p-4 mb-4 rounded-lg">
-            Form submitted successfully!
-        </div>
-
-        <form id="contactForm" class="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto space-y-4">
-            <div>
-                <label class="font-semibold">Full Name</label>
-                <input type="text" id="fullName" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                <p class="text-red-600 text-sm hidden" id="errorName">Full name is required.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Student ID (NIM)</label>
-                <input type="text" id="nim" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                <p class="text-red-600 text-sm hidden" id="errorNim">NIM is required.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Email Address</label>
-                <input type="email" id="email" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                <p class="text-red-600 text-sm hidden" id="errorEmail">Invalid email format.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Faculty / Major</label>
-                <select id="faculty" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                    <option value="">-- Select Faculty --</option>
-                    <option value="FTI">FTI</option>
-                    <option value="FIK">FIK</option>
-                    <option value="FE">FE</option>
-                    <option value="FMIPA">FMIPA</option>
-                </select>
-                <p class="text-red-600 text-sm hidden" id="errorFaculty">Please select a faculty.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Date of Birth</label>
-                <input type="date" id="dob" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                <p class="text-red-600 text-sm hidden" id="errorDob">Date of birth is required.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold block">Gender</label>
-                <div class="flex gap-4">
-                    <label><input type="radio" name="gender" value="Male"> Male</label>
-                    <label><input type="radio" name="gender" value="Female"> Female</label>
-                </div>
-                <p class="text-red-600 text-sm hidden" id="errorGender">Select gender.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Address</label>
-                <textarea id="address" rows="3" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400"></textarea>
-                <p class="text-red-600 text-sm hidden" id="errorAddress">Address is required.</p>
-            </div>
-
-            <div>
-                <label class="font-semibold">Phone Number</label>
-                <input type="text" id="phone" class="w-full p-2 border rounded focus:ring-2 focus:ring-yellow-400">
-                <p class="text-red-600 text-sm hidden" id="errorPhone">Phone must be at least 10 digits and numeric.</p>
-            </div>
-
-            <button type="submit" class="w-full bg-yellow-500 text-black font-semibold p-2 rounded hover:bg-yellow-600 transition">Submit</button>
-        </form>
+    <!-- HERO IMAGE -->
+    <section class="h-[40vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('images/pemandangan-alam-liar.avif');">
+        <h1 class="text-5xl font-bold text-yellow-400 drop-shadow-lg">Free Exploration Page</h1>
     </section>
 
-    <!-- VALIDATION SCRIPT (ISIAN DARI KAMU, SAMA PERSIS) -->
-    <script>
-        const form = document.getElementById("contactForm");
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <!-- INTRO -->
+        <p class="text-gray-300 text-lg leading-relaxed mb-10">
+            Halaman ini berisi eksplorasi bebas bertema alam liar ala National Geographic.
+            Berisi foto-foto, fakta unik, artikel mini, dan video dokumenter untuk 
+            memberi pengalaman eksplorasi yang lebih hidup.
+        </p>
 
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+        <!-- GALERI -->
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">Galeri Eksplorasi</h2>
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+            <img src="images/hutan-tropis.jpg" class="rounded-lg shadow-lg h-48 w-full object-cover">
+            <img src="images/sunrise-point-cukul-pangalengan.jpg" class="rounded-lg shadow-lg h-48 w-full object-cover">
+            <img src="images/lions-botswana-jouberts-selinda-preserve.avif" class="rounded-lg shadow-lg h-48 w-full object-cover">
+            <img src="images/pemandangan-unai.jpg" class="rounded-lg shadow-lg h-48 w-full object-cover">
+            <img src="images/nature.jpg" class="rounded-lg shadow-lg h-48 w-full object-cover">
+            <img src="images/mahasiswa-unai.jpg" class="rounded-lg shadow-lg h-48 w-full object-cover">
+        </div>
 
-            // ambil nilai
-            let name = document.getElementById("fullName").value.trim();
-            let nim = document.getElementById("nim").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let faculty = document.getElementById("faculty").value;
-            let dob = document.getElementById("dob").value;
-            let gender = document.querySelector("input[name='gender']:checked");
-            let address = document.getElementById("address").value.trim();
-            let phone = document.getElementById("phone").value.trim();
+        <!-- QUOTE -->
+        <div class="bg-gray-900 border border-yellow-500 p-8 rounded-xl text-center mb-16">
+            <p class="text-2xl italic text-yellow-300">"The Earth is what we all have in common."</p>
+            <p class="text-gray-400 mt-2">— Wendell Berry</p>
+        </div>
 
-            // flag validasi
-            let valid = true;
+        <!-- VIDEO -->
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">Video Dokumenter</h2>
+        <div class="mb-16">
+            <!-- kalau pakai file video lokal: images/video/videoplayback.mp4 -->
+            <video controls class="w-full h-64 md:h-96 rounded-lg">
+                <source src="video/videoplayback.mp4" type="video/mp4">
+                Browser kamu tidak mendukung video tag.
+            </video>
+        </div>
 
-            // validasi nama
-            if (name === "") {
-                valid = false;
-                document.getElementById("errorName").classList.remove("hidden");
-            } else {
-                document.getElementById("errorName").classList.add("hidden");
-            }
-
-            // validasi NIM
-            if (nim === "") {
-                valid = false;
-                document.getElementById("errorNim").classList.remove("hidden");
-            } else {
-                document.getElementById("errorNim").classList.add("hidden");
-            }
-
-            // validasi email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                valid = false;
-                document.getElementById("errorEmail").classList.remove("hidden");
-            } else {
-                document.getElementById("errorEmail").classList.add("hidden");
-            }
-
-            // validasi faculty
-            if (faculty === "") {
-                valid = false;
-                document.getElementById("errorFaculty").classList.remove("hidden");
-            } else {
-                document.getElementById("errorFaculty").classList.add("hidden");
-            }
-
-            // validasi dob
-            if (dob === "") {
-                valid = false;
-                document.getElementById("errorDob").classList.remove("hidden");
-            } else {
-                document.getElementById("errorDob").classList.add("hidden");
-            }
-
-            // validasi gender
-            if (!gender) {
-                valid = false;
-                document.getElementById("errorGender").classList.remove("hidden");
-            } else {
-                document.getElementById("errorGender").classList.add("hidden");
-            }
-
-            // validasi address
-            if (address === "") {
-                valid = false;
-                document.getElementById("errorAddress").classList.remove("hidden");
-            } else {
-                document.getElementById("errorAddress").classList.add("hidden");
-            }
-
-            // validasi phone
-            if (phone.length < 10 || isNaN(phone)) {
-                valid = false;
-                document.getElementById("errorPhone").classList.remove("hidden");
-            } else {
-                document.getElementById("errorPhone").classList.add("hidden");
-            }
-
-            // jika semua valid
-            if (valid) {
-                document.getElementById("successMessage").classList.remove("hidden");
-
-                // reset form
-                form.reset();
-
-                // otomatis sembunyikan pesan sukses setelah 3 detik
-                setTimeout(() => {
-                    document.getElementById("successMessage").classList.add("hidden");
-                }, 3000);
-            }
-        });
-    </script>
+        <!-- MINI ARTICLE -->
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">Artikel Eksplorasi Mini</h2>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 leading-relaxed mb-20">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Mengapa Eksplorasi Alam Penting?</h3>
+            <p class="text-gray-300">
+                Eksplorasi mini ini jadi ruang kecil untuk nguji rasa penasaran kita. Di sini, setiap langkah dibuat sederhana tapi tetap ngasih pengalaman baru. Mulai dari nyoba hal-hal kecil, ngeliat detail yang sering kelewat, sampai nemuin sudut pandang baru dari sesuatu yang kelihatannya biasa aja.
+            </p>
+            <p class="text-gray-400 mt-4">Dengan memahami alam, kita bisa lebih peduli terhadap pelestarian lingkungan untuk generasi mendatang.</p>
+        </div>
+    </main>
 
     <!-- FOOTER (sama seperti index footer) -->
     <footer class="bg-black border-t border-gray-800 py-12 mt-10">
@@ -260,7 +155,7 @@
         </div>
 
         <div class="border-t border-gray-700 mt-10 pt-6 text-center">
-            <img src="images/logo.png" class="h-8 mx-auto" />
+            <img src="images/National-Geographic-logo.jpg.webp" class="h-8 mx-auto" />
             <p class="text-gray-500 text-xs mt-2">© 2025 National Geographic Inspired Project — Made by Adrian Valentino</p>
         </div>
     </footer>
