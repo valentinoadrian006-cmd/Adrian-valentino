@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata - NatGeo Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobileMenu');
+            nav.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+
+    <!-- NAVBAR (sama seperti index) -->
+    <header class="bg-black border-b border-yellow-500 sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center space-x-3">
+                <img src="images/National-Geographic-logo.jpg.webp" alt="National Geographic Logo" class="h-10 w-auto">
+                <h1 class="text-2xl font-bold text-yellow-400">NatGeo Project</h1>
+            </div>
+
+            <ul class="hidden md:flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="biodata.html" class="text-yellow-400 font-semibold">Biodata</a></li>
+                <li><a href="posts.html" class="hover:text-yellow-400">Posts</a></li>
+                <li><a href="contact_us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                <li><a href="freepage.html" class="hover:text-yellow-400">Free Page</a></li>
+            </ul>
+
+            <button class="md:hidden text-yellow-400 text-3xl" onclick="toggleMenu()">☰</button>
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-yellow-500 p-4 space-y-3 text-lg">
+            <a href="index.html" class="block hover:text-yellow-400">Home</a>
+            <a href="biodata.html" class="block hover:text-yellow-400">Biodata</a>
+            <a href="posts.html" class="block hover:text-yellow-400">Posts</a>
+            <a href="contact_us.html" class="block hover:text-yellow-400">Contact Us</a>
+            <a href="freepage.html" class="block hover:text-yellow-400">Free Page</a>
+        </div>
+    </header>
+
+    <!-- BIODATA CONTENT (ISIAN DARI KAMU, TIDAK SAYA UBAH) -->
+    <main class="max-w-5xl mx-auto py-12 px-4">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-10 border-l-4 border-yellow-400 pl-3">Biodata Mahasiswa</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="flex justify-center">
+                <!-- TARUH FOTO KAMU DI SINI: images/image.png -->
+                <img src="images/image.png" alt="Foto Biodata" class="rounded-xl shadow-xl border border-gray-700 w-64 h-64 object-cover">
+            </div>
+
+            <div class="md:col-span-2 bg-gray-900 p-6 rounded-xl border border-gray-700">
+                <h3 class="text-2xl font-bold mb-4">Identitas Saya</h3>
+
+                <p class="text-gray-300 mb-2"><span class="text-yellow-400 font-semibold">Nama:</span> Adrian Valentino</p>
+                <p class="text-gray-300 mb-2"><span class="text-yellow-400 font-semibold">NIM:</span> 2481042</p>
+                <p class="text-gray-300 mb-2"><span class="text-yellow-400 font-semibold">Jurusan:</span> Teknik Informatika</p>
+                <p class="text-gray-300 mb-2"><span class="text-yellow-400 font-semibold">Kelas:</span> Pemrograman Web 1</p>
+                <p class="text-gray-300 mb-2"><span class="text-yellow-400 font-semibold">Hobi:</span> Gaming, Membaca Komik, Coding</p>
+
+                <hr class="border-gray-700 my-4">
+
+                <h3 class="text-xl font-semibold mb-2 text-yellow-400">Skills</h3>
+                <ul class="list-disc ml-6 text-gray-300">
+                    <li>HTML & CSS Dasar</li>
+                    <li>Tailwind CSS</li>
+                    <li>JavaScript Dasar</li>
+                    <li>Problem Solving</li>
+                </ul>
+
+                <hr class="border-gray-700 my-4">
+
+                <h3 class="text-xl font-semibold mb-2 text-yellow-400">Tentang Saya</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Saya membuat project ini dengan tema National Geographic karena saya tertarik 
+                    dengan alam, satwa liar, dan eksplorasi. Website ini dibuat sebagai Final Project 
+                    Pemrograman Web 1 menggunakan HTML, JavaScript dan Tailwind CSS.
+                </p>
+            </div>
+        </div>
+
+        <!-- TESTIMONIAL (ISIAN DARI KAMU) -->
+        <section class="mt-12 bg-gray-900 p-6 rounded-xl border border-gray-700">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Testimonial / Reflection</h3>
+            <p class="text-gray-300 leading-relaxed">
+                Selama mengikuti mata kuliah Pemrograman Web 1, saya belajar banyak hal baru terutama
+                tentang bagaimana membangun website yang rapi, responsif, dan mengikuti standar modern.
+                Saya juga belajar menggunakan Tailwind CSS yang membuat proses styling jauh lebih cepat 
+                dan efisien. Tantangan terbesar saya adalah memahami konsep responsif, tetapi setelah 
+                latihan dan mencoba banyak contoh, saya mulai terbiasa. Secara keseluruhan, kelas ini 
+                membantu saya memahami dasar pengembangan web dan membuat saya lebih percaya diri 
+                dalam membuat website sendiri.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER (sama seperti index footer, ditambahkan) -->
+    <footer class="bg-black border-t border-gray-800 py-12 mt-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-300 text-sm">
+            <div>
+                <h4 class="font-bold text-white mb-4 tracking-widest text-xs">LEGAL</h4>
+                <ul class="space-y-2">
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                    <li>Your US State Privacy Rights</li>
+                    <li>Children's Online Privacy Policy</li>
+                    <li>Interest-Based Ads</li>
+                    <li>About Nielsen Measurement</li>
+                    <li>Do Not Sell or Share My Personal Info</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-4 tracking-widest text-xs">OUR SITES</h4>
+                <ul class="space-y-2">
+                    <li>Nat Geo Home</li>
+                    <li>Attend a Live Event</li>
+                    <li>Book a Trip</li>
+                    <li>Buy Maps</li>
+                    <li>Inspire Your Kids</li>
+                    <li>Shop Nat Geo</li>
+                    <li>Visit the D.C. Museum</li>
+                    <li>Watch TV</li>
+                    <li>Support Our Mission</li>
+                    <li>Advertise With Us</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-4 tracking-widest text-xs">JOIN US</h4>
+                <ul class="space-y-2">
+                    <li>Subscribe</li>
+                    <li>Customer Service</li>
+                    <li>Manage Your Subscription</li>
+                    <li>Work at Nat Geo</li>
+                    <li>Sign Up for Newsletters</li>
+                    <li>Protect the Planet</li>
+                    <li><a href="https://fti.unai.edu" target="_blank" class="hover:text-yellow-400">FTI UNAI</a></li>
+                    <li><a href="https://unai.edu" target="_blank" class="hover:text-yellow-400">UNAI Website</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-4 tracking-widest text-xs">FOLLOW US</h4>
+                <div class="flex space-x-4 text-xl">
+                    <span>📷</span>
+                    <span>🐦</span>
+                    <span>▶️</span>
+                    <span>📌</span>
+                    <span>🎵</span>
+                </div>
+                <p class="mt-4 text-gray-400 text-xs">🌎 Indonesia</p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+            <img src="images/National-Geographic-logo.jpg.webp" class="h-8 mx-auto" />
+            <p class="text-gray-500 text-xs mt-2">© 2025 National Geographic Inspired Project — Made by Adrian Valentino</p>
+        </div>
+    </footer>
+
+</body>
+</html>
